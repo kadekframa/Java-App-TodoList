@@ -6,6 +6,7 @@ public class AplikasiTodolist {
 
     public static void main(String[] args) {
 //        testShowTodoList();
+        testAddTodoList();
 
 
     }
@@ -67,6 +68,17 @@ public class AplikasiTodolist {
             }
         }
     };
+
+    /**
+     * Testing menambah todo list
+     */
+    public static void testAddTodoList(){
+        for (int i = 0; i < 24; i++) {
+            addTodoList("Todo List ke " + i);
+        }
+
+        showTodoList();
+    }
 
 
     /**
