@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-        testShowTodoList();
+//        testShowTodoList();
 
 
     }
@@ -38,9 +38,36 @@ public class AplikasiTodolist {
     /**
      * Menambahkan todo list
      */
-    public static void addTodoList(){
+    public static void addTodoList(String todo){
+        // cek apakah model penuh?
+        var isFull = true;
+        for (int i = 0; i < model.length; i++) {
+            if (model[i] == null){
+                // model masih ada yang kosong
+                isFull = false;
+                break;
+            }
+        }
 
+        // jika penuh, kita resize ukuran array 2X lipat
+        if (isFull){
+            var temp = model;
+            model = new String[model.length * 2];
+
+            for (int i = 0; i < temp.length; i++) {
+                model[i] = temp[i];
+            }
+        }
+
+        // tambahkan ke posisi yang data arraynya NULL.
+        for (var i = 0; i < model.length; i++){
+            if (model[i] == null){
+                model[i] = todo;
+                break;
+            }
+        }
     };
+
 
     /**
      * Menghapus todo list
