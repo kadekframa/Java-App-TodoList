@@ -5,7 +5,7 @@ public class AplikasiTodolist {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-
+        testShowTodoList();
 
 
     }
@@ -19,10 +19,21 @@ public class AplikasiTodolist {
             var no = i + 1;
 
             if (todo != null){
-                System.out.println(no + "." + todo);
+                System.out.println(no + ". " + todo);
             }
         }
     };
+
+    /**
+     * Testing menampilkan todo list
+     */
+    public static void testShowTodoList(){
+        model[0] = "Belajar Java Dasar";
+        model[1] = "Belajar Java App Todo List";
+        model[2] = "Tetap Semangat";
+        showTodoList();
+    };
+
 
     /**
      * Menambahkan todo list
