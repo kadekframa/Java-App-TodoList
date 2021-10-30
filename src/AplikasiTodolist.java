@@ -10,7 +10,9 @@ public class AplikasiTodolist {
 //        testAddTodoList();
 //        testRemoveTodoList();
 //        testInput();
-        testViewShowTodoList();
+//        testViewShowTodoList();
+        testViewAddTodoList();
+
     }
 
     /**
@@ -202,6 +204,18 @@ public class AplikasiTodolist {
             addTodoList(todo);
         }
     };
+
+    /**
+     * Testing menampilkan view tambah todo list
+     */
+    public static void testViewAddTodoList(){
+        addTodoList("satu");
+        addTodoList("dua");
+
+        viewAddTodoList();
+
+        showTodoList();
+    }
 
     /**
      * Menampilkan view menghapus todo list
