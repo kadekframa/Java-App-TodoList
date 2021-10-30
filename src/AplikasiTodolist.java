@@ -12,6 +12,7 @@ public class AplikasiTodolist {
 //        testInput();
 //        testViewShowTodoList();
 //        testViewAddTodoList();
+        testViewRemoveTodoList();
 
 
     }
@@ -240,6 +241,14 @@ public class AplikasiTodolist {
      * Testing menampilkan view hapus todo list
      */
     public static void testViewRemoveTodoList(){
+        addTodoList("satu");
+        addTodoList("dua");
+        addTodoList("tiga");
 
+        showTodoList();
+
+        viewRemoveTodoList();
+
+        showTodoList();
     }
 }
