@@ -9,13 +9,14 @@ public class AplikasiTodolist {
 //        testShowTodoList();
 //        testAddTodoList();
 //        testRemoveTodoList();
-        testInput();
+//        testInput();
     }
 
     /**
      * Menampilkan todo list
      */
     public static void showTodoList(){
+        System.out.println("TODOLIST");
         for (var i = 0; i < model.length; i++){
             String todo = model[i];
             var no = i + 1;
@@ -144,8 +145,27 @@ public class AplikasiTodolist {
      * Menampilkan view todo list
      */
     public static void viewShowTodoList(){
+        while (true){
+            showTodoList();
 
+            System.out.println("MENU :");
+            System.out.println("1. Tambah todo list");
+            System.out.println("2. Hapus todo list");
+            System.out.println("x. Keluar");
+
+            var input = input("Pilih");
+            if (input.equals("1")){
+                viewAddTodoList();
+            }else if (input.equals("2")){
+                viewRemoveTodoList();
+            }else if(input.equals("x")){
+                break;
+            }else {
+                System.out.println("Pilihan tidak dimengerti.");
+            }
+        }
     };
+
 
     /**
      * Menampilkan view menambahkan todo list
