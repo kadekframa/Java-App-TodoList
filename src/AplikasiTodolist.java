@@ -10,6 +10,7 @@ public class AplikasiTodolist {
 //        testAddTodoList();
 //        testRemoveTodoList();
 //        testInput();
+        testViewShowTodoList();
     }
 
     /**
@@ -126,12 +127,20 @@ public class AplikasiTodolist {
     };
 
 
+    /**
+     * Membuat input data.
+     * @param info
+     * @return
+     */
     public static String input(String info){
         System.out.print(info + " : ");
         String data = scanner.nextLine();
         return data;
     }
 
+    /**
+     * Testing membuat input data.
+     */
     public static void testInput(){
         var name = input("Nama");
         System.out.println("Hi " + name);
@@ -165,6 +174,18 @@ public class AplikasiTodolist {
             }
         }
     };
+
+    /**
+     * Testing menampilkan view todo list
+     */
+    public static void testViewShowTodoList(){
+        addTodoList("satu");
+        addTodoList("dua");
+        addTodoList("tiga");
+        addTodoList("empat");
+        addTodoList("lima");
+        viewShowTodoList();
+    }
 
 
     /**
